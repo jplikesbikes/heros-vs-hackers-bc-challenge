@@ -13,8 +13,15 @@ module.exports = {
 			{ test: /\.html$/, loader: 'html?removeRedundantAttributes=false' }
 		]
 	},
-	//devtool: 'source-map',
+	devtool: 'source-map',
 	debug: true,
+	resolve: {
+		alias: {
+			// So it turns out a bad dedupe can make a module load more than once.
+			// This is to prevent ngDialog from using its angular, and instead use ours
+			angular: __dirname + '/node_modules/angular/index.js',
+		}
+	},
 	entry: { 'main.bundle.js': './index.js' },
 	output: { filename: '[name]', path: '/' },
 	context: process.cwd() + '/src/',

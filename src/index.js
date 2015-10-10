@@ -1,18 +1,29 @@
 'use strict';
 
-define(function(require){
+'use strict';
 
-	var Service = require('./components/dummyService');
-	var service = new Service();
+define(function (require)
+{
+	var angular = require('angular');
+	require('angular-ui-router');
+	require('angular-sanitize');
+	require('angular-bootstrap');
 
-	var messagesContainer = document.getElementById('messages');
+	var app = angular.module('heros-vs-hackers-bc-challenge', ['ngSanitize', 'ui.router', 'ui.bootstrap']);
 
-	function printMessage(value){
-		var message = document.createElement('li');
-		message.textContent = value;
-		messagesContainer.appendChild(message);
-	}
+	app.config(['$stateProvider', '$urlRouterProvider',
+		function (stateProvider, urlRouterProvider)
+		{
+			stateProvider
+				.state('welcome', {
+					url: '/welcome',
+					template: require('./welcome/welcome.html'),
+					controller: ['$scope', require('./welcome/welcomeCtrl')],
+					controllerAs: 'welcomeCtrl'
+				});
 
-	printMessage(service.doSomething());
+			urlRouterProvider.otherwise('/welcome');
+
+		}]);
 
 });
