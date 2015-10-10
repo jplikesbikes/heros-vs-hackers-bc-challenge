@@ -1,0 +1,63 @@
+html, body, ul, li, a, section,
+nav {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.group:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.navigation {
+  display: block;
+  background: green;
+  border: 1px solid red;
+}
+
+body {
+  margin: auto;
+  display: block;
+  width: 700px;
+  height: auto;
+}
+
+.display {
+  display: block;
+  margin: 20px ;
+  width: 600px;
+  height: 0%;
+}
+.items {
+  border:1px solid blue;
+
+}
+
+.items li{
+  margin: 20px;
+  float: left;
+  height: 100px;
+  width: 100px;
+  content:"";
+  display: block;
+  border: 1px solid red;
+}
+
+.move {
+  width: 500px;
+}
+.basket li {
+  display: block;
+  clear:both;
+}
+
+.basket li{
+  display: block;
+  height: 200px;
+  width: 200px;
+  margin: 40px;
+  float: left;
+  border: 1px solid red;
