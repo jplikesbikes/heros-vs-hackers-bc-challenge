@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+	<meta charset="UTF-8">
+	<title>Heroes vs Hackers</title>
+	<!--link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'-->
+	<link rel="stylesheet" href="styles/app.css">
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/skeleton.css">
+</head>
+
+<body ng-controller="MainController as mainController">
+	<div class="container">
+		<div class="row">
+			<!-- Item List -->
+			<div class="four columns">Item List</div>
+			<!-- Barter Window -->
+			<div class="eight columns">Barter Window</div>
+		</div>
+	</div>
+
+	<!-- Load Libs -->
+	<script src="https://code.angularjs.org/1.3.0-rc.2/angular.js"></script>
+	<script src="https://code.angularjs.org/1.3.0-rc.2/angular-route.js"></script>
+	<script src="https://code.angularjs.org/1.3.0-rc.2/angular-resource.js"></script>
+	<script src="scripts/jquery-2.1.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="scripts/lodash.min.js"></script>
+	<!--script src="https://cdn.socket.io/socket.io-1.3.4.js"></script-->
+
+	<!-- Load Angular App -->
+	<script type="text/javascript" src="js/core.js"></script>
+	<script type="text/javascript" src="js/services/httpInterceptor.js"></script>
+	<script type="text/javascript" src="js/controllers/MainController.js"></script>
+</body>
+</html>
